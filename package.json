@@ -2,7 +2,6 @@
   "name": "marrow1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://saurabh9343.github.io/marrow1",
   "dependencies": {
     "firebase": "^12.5.0",
     "react": "^18.2.0",
