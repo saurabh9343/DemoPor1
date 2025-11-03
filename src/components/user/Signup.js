@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, db } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { collection, addDoc } from "firebase/firestore";
+//import { collection, addDoc } from "firebase/firestore";
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -32,12 +32,12 @@ const Signup = () => {
             );
             const user = signupData.user;
 
-            // Step 2: Store extra data in Firestore
-            await addDoc(collection(db, "users"), {
-                uid: user.uid,
-                name: formData.name,
-                email: formData.email
-            });
+            //Step 2: Store extra data in Firestore
+            // await addDoc(collection(db, "admin"), {
+            //     uid: user.uid,
+            //     name: formData.name,
+            //     email: formData.email
+            // });
 
             console.log("✅ Signup successful:", user.email);
             alert("Signup Successful!");
