@@ -18,6 +18,7 @@ import Users from "./components/admin/Users";
 import AdminDeshboard from "./components/admin/AdminDeshboard";
 import AdminLogout from "./components/admin/AdminLogout";
 import AdminProtectedRoute from "./components/admin/AdminProtectedRoute"; // ✅ Add this
+import Gametogenesis from "./components/user/Gametogenesis";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           {/* 🔐 User Protected Routes */}
           <Route element={<ProtectedRoute />}>
             <Route path="/bank" element={<Bank />} />
+            <Route path="/anatomy/gametogenesis" element={<Gametogenesis />} />
             <Route path="/logout" element={<Logout />} />
           </Route>
         </Route>
